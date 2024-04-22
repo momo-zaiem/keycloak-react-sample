@@ -1,0 +1,5 @@
+{
+  "realm": "poc-realm",
+  "resource": "react-sample",
+  "auth-server-url": "https://mz-poc-keycloak.grayforest-e13a4cf9.canadacentral.azurecontainerapps.io/"
+}

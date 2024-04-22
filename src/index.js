@@ -1,6 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import ReactDOM from 'react-dom/client';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import 'bootstrap/dist/css/bootstrap.min.css';
+import KeycloakService from "./services/KeycloakService";
+import {AppRouter} from "./routes/AppRouter";
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+const renderApp = () => {
+    root.render(
+        <React.StrictMode>
+            <AppRouter />
+        </React.StrictMode>
+    );
+}
+
+KeycloakService.initKeycloak(renderApp);
